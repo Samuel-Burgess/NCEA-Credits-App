@@ -11,27 +11,31 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_DashboardWindow(object):
-    def setupUi(self, DashboardWindow):
-        DashboardWindow.setObjectName("MainWindow")
-        DashboardWindow.resize(800, 600)
-        self.centralwidget = QtWidgets.QWidget(DashboardWindow)
+class Ui_Dashboard(object):
+    def setupUi(self, Dashboard):
+        Dashboard.setObjectName("Dashboard")
+        Dashboard.resize(800, 600)
+        self.centralwidget = QtWidgets.QWidget(Dashboard)
         self.centralwidget.setObjectName("centralwidget")
-        self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
-        self.textBrowser.setGeometry(QtCore.QRect(10, 10, 471, 31))
-        self.textBrowser.setObjectName("textBrowser")
-        DashboardWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(DashboardWindow)
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(10, 10, 141, 21))
+        self.label.setObjectName("label")
+        self.tableView = QtWidgets.QTableView(self.centralwidget)
+        self.tableView.setGeometry(QtCore.QRect(90, 120, 256, 192))
+        self.tableView.setObjectName("tableView")
+        Dashboard.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(Dashboard)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
         self.menubar.setObjectName("menubar")
-        DashboardWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(DashboardWindow)
+        Dashboard.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(Dashboard)
         self.statusbar.setObjectName("statusbar")
-        DashboardWindow.setStatusBar(self.statusbar)
+        Dashboard.setStatusBar(self.statusbar)
 
-        self.retranslateUi(DashboardWindow)
-        QtCore.QMetaObject.connectSlotsByName(DashboardWindow)
+        self.retranslateUi(Dashboard)
+        QtCore.QMetaObject.connectSlotsByName(Dashboard)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, Dashboard):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        Dashboard.setWindowTitle(_translate("Dashboard", "MainWindow"))
+        self.label.setText(_translate("Dashboard", "Welcome to the dashboard!"))

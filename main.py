@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from welcome import Ui_MainWindow
-from dashboard import Ui_DashboardWindow  # Import the Dashboard UI class
+from dashboard import Ui_Dashboard  # Import the Dashboard UI class
 
 
 class WelcomeScreen(QMainWindow, Ui_MainWindow):
@@ -17,7 +17,7 @@ class WelcomeScreen(QMainWindow, Ui_MainWindow):
         self.close()  # Close the welcome screen
 
 
-class DashboardScreen(QMainWindow, Ui_DashboardWindow):
+class DashboardScreen(QMainWindow, Ui_Dashboard):
     def __init__(self):
         super().__init__()
         self.setupUi(self)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>Dashboard</class>
+ <widget class="QMainWindow" name="Dashboard">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -14,13 +14,26 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTextBrowser" name="textBrowser">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>471</width>
-      <height>31</height>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Welcome to the dashboard!</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>120</y>
+      <width>256</width>
+      <height>192</height>
      </rect>
     </property>
    </widget>
